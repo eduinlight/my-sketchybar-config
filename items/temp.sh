@@ -14,5 +14,5 @@ temp=(
   update_freq=10
 )
 
-sketchybar --add item temp left \
+sketchybar --add item temp right \
   --set temp "${temp[@]}"

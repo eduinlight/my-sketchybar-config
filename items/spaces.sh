@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12")
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9")
 
 # Destroy space on right click, focus space on left click.
 # New space by left clicking separator (>)
@@ -17,7 +17,7 @@ for i in "${!SPACE_ICONS[@]}"; do
     icon.padding_right=10
     padding_left=2
     padding_right=2
-    label.padding_right=20
+    label.padding_right=0
     icon.highlight_color="$RED"
     label.color="$GREY"
     label.highlight_color="$WHITE"
@@ -33,18 +33,15 @@ for i in "${!SPACE_ICONS[@]}"; do
     --subscribe space.$sid mouse.clicked
 done
 
-space_creator=(
-  icon=􀆊
-  icon.font="$FONT:Heavy:16.0"
-  padding_left=10
-  padding_right=8
+space_windows=(
+  icon.drawing=off
   label.drawing=off
   display=active
-  click_script='yabai -m space --create'
+  padding_left=0
+  padding_right=0
   script="$PLUGIN_DIR/space_windows.sh"
-  icon.color="$WHITE"
 )
 
-sketchybar --add item space_creator left \
-  --set space_creator "${space_creator[@]}" \
-  --subscribe space_creator space_windows_change
+sketchybar --add item space_windows left \
+  --set space_windows "${space_creator[@]}" \
+  --subscribe space_windows space_windows_change

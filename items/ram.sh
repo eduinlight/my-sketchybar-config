@@ -7,7 +7,7 @@ stats_bracket=(
   padding_left=20
 )
 
-sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.memory" left \
+sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.memory" right \
   --rename "iStat Menus Status,com.bjango.istatmenus.memory" ram_alias \
   --set ram_alias icon.drawing=off \
   label.drawing=off \

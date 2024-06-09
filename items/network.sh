@@ -40,7 +40,7 @@
 # 	--set network.down "${network_down[@]}" \
 # 	--add item network.up left \
 # 	--set network.up "${network_up[@]}"
-sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.network" left \
+sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.network" right \
   --rename "iStat Menus Status,com.bjango.istatmenus.network" network_alias \
   --set network_alias icon.drawing=off \
   label.drawing=off \

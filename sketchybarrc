@@ -1,10 +1,11 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/colors.sh" # Loads all defined colors
-source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
+source $CONFIG_DIR/colors.sh # Loads all defined colors
+source $CONFIG_DIR/icons.sh  # Loads all defined icons
+source $PLUGIN_DIR/icons_map.sh
 
-ITEM_DIR="$CONFIG_DIR/items"            # Directory where the items are configured
-export PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
+ITEM_DIR=$CONFIG_DIR/items            # Directory where the items are configured
+export PLUGIN_DIR=$CONFIG_DIR/plugins # Directory where all the plugin scripts are stored
 
 FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 PADDINGS=2    # All paddings use this value (icon, label, background)
@@ -53,24 +54,25 @@ defaults=(
 )
 
 sketchybar --default "${defaults[@]}"
-source "$ITEM_DIR/apple.sh"
-source "$ITEM_DIR/spaces.sh"
-source "$ITEM_DIR/front_app.sh"
-source "$ITEM_DIR/yabai.sh"
-source "$ITEM_DIR/temp.sh"
-source "$ITEM_DIR/network.sh"
-source "$ITEM_DIR/ram.sh"
+source $ITEM_DIR/apple.sh
+source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/separator.sh left
+source $ITEM_DIR/front_app.sh
+# source $ITEM_DIR/yabai.sh
 
 # Right
-source "$ITEM_DIR/calendar.sh"
-source "$ITEM_DIR/brew.sh"
-source "$ITEM_DIR/vpn.sh"
-source "$ITEM_DIR/github.sh"
-source "$ITEM_DIR/input_source.sh"
-source "$ITEM_DIR/wifi.sh"
-source "$ITEM_DIR/volume.sh"
-source "$ITEM_DIR/battery.sh"
-# source "$ITEM_DIR/music.sh"
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/brew.sh
+source $ITEM_DIR/vpn.sh
+source $ITEM_DIR/github.sh
+source $ITEM_DIR/input_source.sh
+source $ITEM_DIR/wifi.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/ram.sh
+source $ITEM_DIR/network.sh
+source $ITEM_DIR/temp.sh
+# source $ITEM_DIR/music.sh
 
 sketchybar --hotload on
 
