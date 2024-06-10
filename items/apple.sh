@@ -1,10 +1,12 @@
 #!/bin/bash
-sketchybar --add item apple.logo left \
+# arguments
+# $1 => direction [right, left, center]
+
+sketchybar --add item apple.logo $1 \
   --set apple.logo icon=􀣺 \
   icon.font="$FONT:Black:18.0" \
   label.drawing=off \
-  padding_right=10 \
-  padding_left=10 \
+  \
   popup.background.border_width=1 \
   popup.background.corner_radius=10 \
   popup.background.border_color=$WHITE \
@@ -25,4 +27,5 @@ sketchybar --add item apple.logo left \
   --add item apple.lock popup.apple.logo \
   --set apple.lock icon=$LOCK \
   label="Lock Screen" \
-  click_script="pmset displaysleepnow; sketchybar -m --set apple.logo popup.drawing=off"
+  click_script="pmset displaysleepnow; sketchybar -m --set apple.logo popup.drawing=off" # padding_right=10 \
+# padding_left=10 \

@@ -1,4 +1,6 @@
 #!/bin/bash
+# arguments
+# $1 => direction [right, left, center]
 
 yabai=(
   icon.width=0
@@ -12,7 +14,7 @@ yabai=(
 sketchybar --add event layout_changed \
   --add event window_focus \
   --add event temp_float_toggle \
-  --add item yabai left \
+  --add item yabai $1 \
   --set yabai "${yabai[@]}" \
   --subscribe yabai space_change \
   layout_changed \

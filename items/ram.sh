@@ -1,13 +1,15 @@
 #!/bin/bash
+# arguments
+# $1 => direction [right, left, center]
 
 stats_bracket=(
-  background.color="$BACKGROUND_1"
-  background.border_color="$TRANSPARENT"
+  # background.color="$BACKGROUND_1"
+  # background.border_color="$TRANSPARENT"
   background.height=30
   padding_left=20
 )
 
-sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.memory" right \
+sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.memory" %1 \
   --rename "iStat Menus Status,com.bjango.istatmenus.memory" ram_alias \
   --set ram_alias icon.drawing=off \
   label.drawing=off \

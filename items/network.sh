@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# arguments
+# $1 => direction [right, left, center]
+
 #
 # source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 # source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
@@ -40,7 +44,7 @@
 # 	--set network.down "${network_down[@]}" \
 # 	--add item network.up left \
 # 	--set network.up "${network_up[@]}"
-sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.network" right \
+sketchybar --add alias "iStat Menus Status,com.bjango.istatmenus.network" $1 \
   --rename "iStat Menus Status,com.bjango.istatmenus.network" network_alias \
   --set network_alias icon.drawing=off \
   label.drawing=off \

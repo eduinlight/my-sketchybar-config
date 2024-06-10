@@ -1,28 +1,30 @@
 #!/bin/bash
 
+ITEM_DIR=$CONFIG_DIR/items            # Directory where the items are configured
+export PLUGIN_DIR=$CONFIG_DIR/plugins # Directory where all the plugin scripts are stored
+
 source $CONFIG_DIR/colors.sh # Loads all defined colors
 source $CONFIG_DIR/icons.sh  # Loads all defined icons
 source $PLUGIN_DIR/icons_map.sh
 
-ITEM_DIR=$CONFIG_DIR/items            # Directory where the items are configured
-export PLUGIN_DIR=$CONFIG_DIR/plugins # Directory where all the plugin scripts are stored
-
 FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 PADDINGS=2    # All paddings use this value (icon, label, background)
+LABEL_FONT_SIZE=12
+ICON_FONT_SIZE=12
 
 # Setting up the general bar appearance of the bar
 bar=(
   height=32
-  color="$TRANSPARENT"
+  color="$BACKGROUND_1"
   border_width=1
   border_color="$TRANSPARENT"
   shadow=off
   position=top
   sticky=on
-  padding_right=2
-  padding_left=2
+  padding_right=10
+  padding_left=10
   y_offset=0
-  margin=-2
+  # margin=-2
   topmost=window
 )
 
@@ -31,11 +33,11 @@ sketchybar --bar "${bar[@]}"
 # Setting up default values
 defaults=(
   updates=when_shown
-  icon.font="$FONT:Bold:14.0"
+  icon.font="$FONT:Bold:$ICON_FONT_SIZE.0"
   icon.color="$ICON_COLOR"
   icon.padding_left="$PADDINGS"
   icon.padding_right="$PADDINGS"
-  label.font="$FONT:Semibold:13.0"
+  label.font="$FONT:Semibold:$LABEL_FONT_SIZE.0"
   label.color="$LABEL_COLOR"
   label.padding_left="$PADDINGS"
   label.padding_right="$PADDINGS"
@@ -54,25 +56,28 @@ defaults=(
 )
 
 sketchybar --default "${defaults[@]}"
-source $ITEM_DIR/apple.sh
-source $ITEM_DIR/spaces.sh
+# Left
+source $ITEM_DIR/apple.sh left
+source $ITEM_DIR/spaces.sh left
 source $ITEM_DIR/separator.sh left
-source $ITEM_DIR/front_app.sh
-# source $ITEM_DIR/yabai.sh
+source $ITEM_DIR/front_app.sh left
+# source $ITEM_DIR/yabai.sh right
 
 # Right
-source $ITEM_DIR/calendar.sh
-source $ITEM_DIR/brew.sh
-source $ITEM_DIR/vpn.sh
-source $ITEM_DIR/github.sh
-source $ITEM_DIR/input_source.sh
-source $ITEM_DIR/wifi.sh
-source $ITEM_DIR/volume.sh
-source $ITEM_DIR/battery.sh
-source $ITEM_DIR/ram.sh
-source $ITEM_DIR/network.sh
-source $ITEM_DIR/temp.sh
-# source $ITEM_DIR/music.sh
+source $ITEM_DIR/wifi.sh right
+source $ITEM_DIR/brew.sh right
+# source $ITEM_DIR/vpn.sh right
+# source $ITEM_DIR/github.sh right
+# source $ITEM_DIR/input_source.sh right
+# source $ITEM_DIR/volume.sh right
+source $ITEM_DIR/battery.sh right
+# source $ITEM_DIR/ram.sh right
+# source $ITEM_DIR/network.sh right
+source $ITEM_DIR/temp.sh right
+# source $ITEM_DIR/music.sh right
+
+# Center
+source $ITEM_DIR/calendar.sh center
 
 sketchybar --hotload on
 

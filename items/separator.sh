@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # arguments
-# $1 => direction [right, left]
+# $1 => direction [right, left, center]
 
 separator=(
   icon.drawing=off
@@ -10,6 +10,8 @@ separator=(
   label="|"
   padding_right=4
   padding_left=0
+  icon.padding_left=0
+  icon.padding_right=0
   display=active
 )
 
