@@ -15,5 +15,5 @@ separator=(
   display=active
 )
 
-sketchybar --add item separator $1 \
-  --set separator "${separator[@]}"
+sketchybar --add item separator_$2 $1 \
+  --set separator_$2 "${separator[@]}"

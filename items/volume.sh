@@ -3,7 +3,7 @@
 # arguments
 # $1 => direction [right, left, center]
 
-data=(
+params=(
   icon.drawing=off
   label.drawing=off
   alias.color="$WHITE"
@@ -14,4 +14,4 @@ data=(
 
 sketchybar --add alias "Control Center,Sound" $1 \
   --rename "Control Center,Sound" volume_alias \
-  --set volume_alias "${data[@]}"
+  --set volume_alias "${params[@]}"
