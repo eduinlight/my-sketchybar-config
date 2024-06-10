@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ITEM_DIR=$CONFIG_DIR/items            # Directory where the items are configured
 export PLUGIN_DIR=$CONFIG_DIR/plugins # Directory where all the plugin scripts are stored
@@ -65,12 +65,12 @@ source $ITEM_DIR/front_app.sh left
 
 # Right
 source $ITEM_DIR/wifi.sh right
+source $ITEM_DIR/battery.sh right
 source $ITEM_DIR/brew.sh right
 # source $ITEM_DIR/vpn.sh right
 # source $ITEM_DIR/github.sh right
 # source $ITEM_DIR/input_source.sh right
 # source $ITEM_DIR/volume.sh right
-source $ITEM_DIR/battery.sh right
 # source $ITEM_DIR/ram.sh right
 # source $ITEM_DIR/network.sh right
 source $ITEM_DIR/temp.sh right
@@ -79,7 +79,7 @@ source $ITEM_DIR/temp.sh right
 # Center
 source $ITEM_DIR/calendar.sh center
 
-# sketchybar --hotload on
+sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update

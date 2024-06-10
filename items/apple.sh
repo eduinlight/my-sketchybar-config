@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # arguments
 # $1 => direction [right, left, center]
 
@@ -27,5 +27,4 @@ sketchybar --add item apple.logo $1 \
   --add item apple.lock popup.apple.logo \
   --set apple.lock icon=$LOCK \
   label="Lock Screen" \
-  click_script="pmset displaysleepnow; sketchybar -m --set apple.logo popup.drawing=off" # padding_right=10 \
-# padding_left=10 \
+  click_script="pmset displaysleepnow; sketchybar -m --set apple.logo popup.drawing=off"# padding_left=10 \ # padding_right=10 \

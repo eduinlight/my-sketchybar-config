@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 ifstat_path="/opt/homebrew/bin/ifstat"
+
 UPDOWN=$("$ifstat_path" -i "en0" -b 0.1 1 | tail -n1)
 DOWN=$(echo "$UPDOWN" | awk "{ print \$1 }" | cut -f1 -d ".")
 UP=$(echo "$UPDOWN" | awk "{ print \$2 }" | cut -f1 -d ".")

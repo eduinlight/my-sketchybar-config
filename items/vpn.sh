@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # arguments
 # $1 => direction [right, left, center]
 
