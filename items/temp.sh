@@ -5,15 +5,17 @@
 
 temp=(
   script="$PLUGIN_DIR/temp.sh"
-  icon=":cpu:"
-  icon.font="sketchybar-app-font:Regular:15.0"
-  icon.font.size=15.0
+  icon="CPU"
+  icon.font="$FONT:Bold:7.0"
+  icon.y_offset=6
   icon.padding_right=0
   padding_right=0
-  padding_left=0
-  label=" Temp Unkown"
+  padding_left=4
   label.drawing=on
-  label.padding_right=5
+  label.font="$FONT:Bold:11.0"
+  label.padding_left=-20
+  label.padding_left=-20
+  label.y_offset=-4
   update_freq=10
 )
 

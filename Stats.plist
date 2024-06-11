@@ -2,18 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BAT_mini_label</key>
+	<true/>
 	<key>Battery_barChart_position</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>Battery_bar_chart_box</key>
-	<false/>
+	<true/>
 	<key>Battery_bar_chart_frame</key>
 	<false/>
 	<key>Battery_bar_chart_label</key>
 	<false/>
 	<key>Battery_batteryDetails_position</key>
-	<integer>2</integer>
-	<key>Battery_battery_position</key>
 	<integer>3</integer>
+	<key>Battery_battery_color</key>
+	<true/>
+	<key>Battery_battery_position</key>
+	<integer>0</integer>
 	<key>Battery_label_position</key>
 	<integer>4</integer>
 	<key>Battery_mini_position</key>
@@ -21,9 +25,9 @@
 	<key>Battery_oneView</key>
 	<true/>
 	<key>Battery_state</key>
-	<false/>
+	<true/>
 	<key>Battery_widget</key>
-	<string>bar_chart,mini</string>
+	<string>battery</string>
 	<key>Bluetooth_state</key>
 	<false/>
 	<key>CPU_processes</key>
@@ -64,8 +68,12 @@
 	<false/>
 	<key>GPU_updateInterval</key>
 	<integer>5</integer>
+	<key>NSNavLastRootDirectory</key>
+	<string>~</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>745 687 430 163 0 0 1920 1080 </string>
+	<string>560 402 800 448 0 0 1920 1080 </string>
 	<key>Network_state</key>
 	<true/>
 	<key>RAM_mini_color</key>

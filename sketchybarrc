@@ -60,20 +60,21 @@ sketchybar --default "${defaults[@]}"
 source $ITEM_DIR/apple.sh left
 source $ITEM_DIR/spaces.sh left
 source $ITEM_DIR/separator.sh left 1
-source $ITEM_DIR/front_app.sh left
+source $ITEM_DIR/temp.sh left
+source $ITEM_DIR/stats.sh left
 # source $ITEM_DIR/yabai.sh right
 
 # Right
+source $ITEM_DIR/calendar.sh right
 source $ITEM_DIR/wifi.sh right
-source $ITEM_DIR/battery.sh right
+source $ITEM_DIR/aliases/battery.sh right
 source $ITEM_DIR/brew.sh right
-source $ITEM_DIR/temp.sh right
-source $ITEM_DIR/stats.sh right
+source $ITEM_DIR/sharing-screen.sh right
 
 # Center
-source $ITEM_DIR/calendar.sh center
+source $ITEM_DIR/front-app.sh center
 
-sketchybar --hotload off
+sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update
