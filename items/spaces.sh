@@ -43,7 +43,7 @@ space_windows=(
   icon.drawing=off
   label.drawing=off
   display=active
-  script="$PLUGIN_DIR/space_windows.sh"
+  script="$PLUGIN_DIR/space-windows.sh"
 )
 
 sketchybar --add item space_windows $1 \
