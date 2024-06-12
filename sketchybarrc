@@ -69,12 +69,13 @@ source $ITEM_DIR/calendar.sh right
 source $ITEM_DIR/wifi.sh right
 source $ITEM_DIR/aliases/battery.sh right
 source $ITEM_DIR/brew.sh right
+source $ITEM_DIR/apps-status.sh right
 source $ITEM_DIR/sharing-screen.sh right
 
 # Center
 source $ITEM_DIR/front-app.sh center
 
-sketchybar --hotload off
+sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update

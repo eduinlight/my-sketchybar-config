@@ -15,14 +15,14 @@ params=(
   label.drawing=off
   background.padding_right=0
   background.padding_left=0
-  padding_right=-15
+  padding_right=0
   alias.color="$WHITE"
-  alias.scale=1
+  alias.scale=0.8
   update_freq=10
 )
 
-bar_icons=("Stats,CPU_mini" "Stats,RAM_mini" "Stats,Disk_memory" "Stats,Network_speed")
-names=("cpu_alias" "ram_alias" "disk_alias" "network_alias")
+bar_icons=("Docker Desktop,Item-0" "TorGuardDesktopQt,Item-0" "WireGuard,Item-0")
+names=("dockr_alias" "torguard_alias" "wireguard_alias")
 i=0
 for alias in "${bar_icons[@]}"; do
   name="${names[$i]}"
