@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# requirements
-# https://github.com/exelban/stats
-
 # notes
 # check the name of stats aliases with
 # sketchybar --query default_menu_items
