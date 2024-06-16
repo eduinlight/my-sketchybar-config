@@ -11,6 +11,7 @@ params=(
   label.padding_left=-5
   label.padding_right=2
   alias.scale=0.87
+  alias.color=$WHITE
   script="$PLUGIN_DIR/wifi-name.sh"
 )
 

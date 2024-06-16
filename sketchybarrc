@@ -67,6 +67,7 @@ source $ITEM_DIR/stats.sh left
 # Right
 source $ITEM_DIR/calendar.sh right
 source $ITEM_DIR/wifi.sh right
+source $ITEM_DIR/volumesh right
 source $ITEM_DIR/aliases/battery.sh right
 source $ITEM_DIR/brew.sh right
 source $ITEM_DIR/apps-status.sh right
