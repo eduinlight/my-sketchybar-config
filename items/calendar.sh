@@ -14,7 +14,7 @@ calendar=(
   label.color=$CYAN
   padding_left=5
   script="$PLUGIN_DIR/calendar.sh"
-  update_freq=30
+  update_freq=5
 )
 
 sketchybar --add item calendar $1 \
